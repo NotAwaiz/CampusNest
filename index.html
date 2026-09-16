@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "secondary-fixed-dim": "#63d8d3",
+          "error-container": "#ffdad6",
+          "surface-container-lowest": "#ffffff",
+          "error": "#ba1a1a",
+          "outline": "#72787d",
+          "on-error-container": "#93000a",
+          "on-secondary": "#ffffff",
+          "primary-fixed": "#c7e7fe",
+          "on-secondary-fixed": "#00201f",
+          "on-primary-container": "#7593a9",
+          "on-primary": "#ffffff",
+          "on-surface-variant": "#42474c",
+          "on-tertiary-fixed": "#002111",
+          "surface-variant": "#d9e3fb",
+          "surface-bright": "#f9f9ff",
+          "outline-variant": "#c2c7cc",
+          "tertiary-fixed": "#93f7bc",
+          "surface-tint": "#446276",
+          "on-primary-fixed": "#001e2e",
+          "on-secondary-container": "#006f6b",
+          "surface-container-low": "#f0f3ff",
+          "inverse-on-surface": "#ecf0ff",
+          "tertiary-fixed-dim": "#77daa1",
+          "surface": "#f9f9ff",
+          "background": "#f9f9ff",
+          "inverse-primary": "#accbe2",
+          "secondary-container": "#7ff2ec",
+          "surface-container-highest": "#d9e3fb",
+          "primary": "#001622",
+          "on-tertiary-container": "#3ca16d",
+          "surface-container-high": "#dfe8ff",
+          "on-tertiary-fixed-variant": "#005231",
+          "surface-dim": "#d0daf2",
+          "on-tertiary": "#ffffff",
+          "secondary": "#006a66",
+          "on-background": "#111c2d",
+          "primary-fixed-dim": "#accbe2",
+          "tertiary": "#00180b",
+          "secondary-fixed": "#82f5ef",
+          "tertiary-container": "#002f1a",
+          "primary-container": "#082b3d",
+          "surface-container": "#e8eeff",
+          "inverse-surface": "#273143",
+          "on-surface": "#111c2d",
+          "on-error": "#ffffff",
+          "on-secondary-fixed-variant": "#00504d",
+          "on-primary-fixed-variant": "#2c4a5d"
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+        spacing: {
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2.5rem",
+          margin: "3rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem",
+          gutter: "1.5rem",
+          "space-md": "1rem"
+        },
+        fontFamily: {
+          "label-lg": ["Inter"],
+          "headline-lg-mobile": ["Epilogue"],
+          "body-lg": ["Inter"],
+          "headline-md": ["Epilogue"],
+          "headline-sm": ["Epilogue"],
+          "headline-lg": ["Epilogue"],
+          "label-md": ["Inter"],
+          "body-sm": ["Inter"],
+          "headline-xl": ["Epilogue"],
+          "body-md": ["Inter"],
+          "headline-xl-mobile": ["Epilogue"],
+          "label-sm": ["Inter"]
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+<!-- TOP NAVIGATION BAR -->
+<header id="campusnest-navbar" class="campusnest-navbar fixed top-0 left-0 right-0 z-50 bg-transparent border-transparent shadow-none">
+<div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md">
+<!-- Logo Branding -->
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-space-xs group" data-path="home" href="#brand-intro">
+<img alt="CampusNest Logo" class="h-11 w-auto object-contain" src="Campusnest.png"/>
+</a>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-space-xs">
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface hover:text-secondary hover:bg-surface-container-low transition-all font-semibold" data-path="explore-pgs" href="#discover-section">Explore PGs</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="how-it-works" href="#how-it-works">How It Works</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="services" href="#services-roadmap">Services</a>
+<a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" data-path="contact" href="#footer-contact">Contact</a>
+</nav>
+<!-- Action CTAs -->
+<div class="flex items-center gap-space-sm">
+<!-- Favorites Bookmark Icon -->
+<a aria-label="Saved Properties" class="relative p-space-sm text-on-surface-variant hover:text-secondary transition-colors rounded-full hover:bg-surface-container-low flex items-center justify-center" href="#discover-section">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary rounded-full font-label-sm text-[10px] flex items-center justify-center leading-none" id="bookmark-badge">2</span>
+</a>
+<!-- Prominent Owner CTA: + List Your Property -->
+<button class="inline-flex items-center gap-space-xs px-3.5 sm:px-space-md py-2 sm:py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md shadow-sm hover:shadow transition-all group" onclick="openOwnerModal()" type="button">
+<span class="material-symbols-outlined text-[19px] group-hover:rotate-90 transition-transform">add_circle</span>
+<span class="font-bold tracking-tight">+ List Your Property</span>
+<span class="hidden xl:inline-block text-xs bg-white/20 px-1.5 py-0.5 rounded ml-0.5 text-secondary-fixed font-semibold">Rent Out</span>
+</button>
+<!-- User profile / Quick Switcher -->
+<div class="relative group">
+<button aria-label="User account menu" class="flex items-center gap-space-xs p-1 rounded-full hover:ring-2 hover:ring-secondary/30 transition-all" type="button">
+<div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-bold font-label-md border border-secondary/20">
+              ST
+            </div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] hidden sm:inline-block">expand_more</span>
+</button>
+<div class="absolute right-0 mt-2 w-64 bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_-6px_rgba(8,43,61,0.12)] border border-outline-variant/40 py-space-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+<div class="px-space-md py-space-sm border-b border-outline-variant/30">
+<p class="font-label-md text-label-md text-primary font-bold">Mumbai &amp; Navi Mumbai</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">student@campusnest.in</p>
+</div>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#discover-section">
+<span class="material-symbols-outlined text-[18px] text-secondary">explore</span>Explore Verified Stays
+            </a>
+<button class="w-full text-left flex items-center gap-space-sm px-space-md py-space-sm font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" onclick="openOwnerModal()" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">domain_add</span>Host / Owner Portal
+            </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<!-- =========================================================
+     CAMPUSNEST BRAND INTRO / HERO VIDEO
+     ---------------------------------------------------------
+     Interaction is controlled by script.js:
+     • Initial load: video is paused
+     • First downward scroll: start the reveal
+     • Second downward scroll: enter the homepage
+     • If video finishes while still here: auto-scroll to homepage
+     • Clicking the video toggles play / pause
+     ========================================================= -->
+<section class="brand-intro" id="brand-intro" data-intro-state="waiting" aria-label="CampusNest brand introduction">
+  <video
+  class="brand-intro__video"
+  id="brand-intro-video"
+  muted
+  playsinline
+  preload="auto"
+  aria-label="CampusNest brand identity reveal video">
+    <source src="CampNest_3D.mp4" type="video/mp4" />
+    Your browser does not support the CampusNest brand reveal video.
+  </video>
+
+  <div class="brand-intro__veil" aria-hidden="true"></div>
+
+</section>
+
+<main id="campusnest-homepage" class="w-full bg-background">
+<div class="flex flex-col w-full">
+<!-- 1. HERO SECTION & BESPOKE SEARCH ENGINE -->
+<section class="w-full bg-gradient-to-b from-surface-container-low via-surface-container-low/70 to-background py-space-xl relative" id="hero-search-hub" aria-label="CampusNest search and featured stays">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Copy & Interactive Search Console -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary/10 border border-secondary/20 self-start">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span class="font-label-md text-label-md text-secondary tracking-wide uppercase font-semibold">100% Student-Verified PGs &amp; Hostels</span>
+</div>
+<div class="space-y-space-xs">
+<h1 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl text-primary font-bold tracking-tight leading-tight">
+                  Find a place that feels like <span class="text-secondary underline decoration-secondary-fixed underline-offset-4">home.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                  Discover verified PGs, hostels, and authentic student living in <strong>Mumbai</strong> and <strong>Navi Mumbai</strong>. Zero brokerage, genuine photos, and in-person verified amenities near your university campus.
+                </p>
+</div>
+<!-- Comprehensive Filterable Search Engine -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/30 p-space-md lg:p-space-lg space-y-space-md">
+<!-- Stay Type Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs" id="stay-category-tabs">
+<button class="stay-tab active-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-secondary text-on-secondary transition-all font-semibold" data-type="all" type="button">All Stays</button>
+<button class="stay-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface transition-all font-semibold" data-type="girls" type="button">Girls PG</button>
+<button class="stay-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface transition-all font-semibold" data-type="boys" type="button">Boys PG</button>
+<button class="stay-tab px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface transition-all font-semibold" data-type="coliving" type="button">Co-Living &amp; Flats</button>
+</div>
+<!-- Main Input Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant text-[20px]">location_on</span>
+<input class="w-full pl-10 pr-3 py-2.5 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary outline-none transition-all border border-transparent focus:border-secondary" id="hero-location-input" placeholder="Kharghar, Powai, Nerul, Bandra..." type="text"/>
+</div>
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant text-[20px]">currency_rupee</span>
+<select class="w-full pl-10 pr-8 py-2.5 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary outline-none appearance-none transition-all cursor-pointer border border-transparent focus:border-secondary" id="hero-budget-select">
+<option value="all">Any Monthly Budget</option>
+<option value="under-10k">Under ₹10,000/mo</option>
+<option value="10k-15k">₹10,000 - ₹15,000/mo</option>
+<option value="15k-25k">₹15,000 - ₹25,000/mo</option>
+<option value="luxury">Premium (₹25,000+/mo)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="md:col-span-3">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-md hover:shadow-lg transition-all font-semibold" id="hero-search-btn" type="button">
+<span>Find Stays</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Popular Quick Chips for Mumbai & Navi Mumbai -->
+<div class="pt-space-xs flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Hotspots:</span>
+<button class="quick-chip px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-sm text-label-sm transition-colors" data-city="Navi Mumbai" data-locality="Kharghar" type="button">Kharghar (NIFT / Bharati)</button>
+<button class="quick-chip px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-sm text-label-sm transition-colors" data-city="Mumbai" data-locality="Powai" type="button">Powai (IIT Bombay)</button>
+<button class="quick-chip px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-sm text-label-sm transition-colors" data-city="Navi Mumbai" data-locality="Nerul" type="button">Nerul (DY Patil Campus)</button>
+<button class="quick-chip px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-secondary-fixed hover:text-on-secondary-fixed font-label-sm text-label-sm transition-colors" data-city="Mumbai" data-locality="Vile Parle" type="button">Vile Parle (NMIMS / Mithibai)</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Featured Hero Authentic Property Vignette -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container-highest group border border-outline-variant/30">
+<img alt="Authentic Mumbai Student Co-living Apartment" class="w-full h-[470px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtKU3BcpSyVmUSdo3aXWDSGdajX9ZDMxDwyDpi8gSk_m_fzvajdJcUw4L4XclfAbw8VICboE7rnngr7_Aa_PfmIQLuN9o3K_EERQtimWZxqB5cz1vJtcKqGf_Wbx9Ld1Ykndt57a8k4bhH9KMdVOI8lcPW64k5feHfb11DOMIrLCvV6imn8dzyr-s1tieoJVzfmWR7FLl5RSIr6dLY-3vBI49i0S6KmEIlPX6Ibjoo44pMb8K3MJr4"/>
+<!-- Floating card with genuine details -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-space-md rounded-xl shadow-lg border border-outline-variant/30">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Physical Verification Completed
+                    </span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">₹15,000<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">Heritage Student Suite &amp; Co-Living</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">pin_drop</span>
+                    0.6 km to Campus • Powai &amp; Vikhroli, Mumbai
+                  </p>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between border-t border-outline-variant/20">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant">(142 student reviews)</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1" onclick="openPropertyModal('prop-1')" type="button">
+<span>Quick View</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. TRUST STRIP -->
+<section class="w-full bg-surface-container-lowest py-space-lg shadow-sm border-y border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md">
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Near Your Campus</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Under 15 min walk/metro</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">100% In-Person Verified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inspected room by room</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Student Budgets</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Affordable &amp; twin sharing</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">reviews</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Real Peer Reviews</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">By active campus batchmates</p>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 flex items-center gap-space-sm p-space-sm rounded-xl hover:bg-surface-container-low transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">vpn_key</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Zero Brokerage</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct owner contract</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. DISCOVER PGS SECTION (Realistic Photography in Mumbai & Navi Mumbai) -->
+<section class="w-full py-space-xl bg-background" id="discover-section">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase font-bold">Verified Student Accommodations</span>
+<h2 class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-primary font-bold mt-1">Find your perfect stay in Mumbai &amp; Navi Mumbai</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Real rooms, actual study setups, and vetted campus locations.</p>
+</div>
+<!-- Live Result Counter -->
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium" id="listing-counter">Showing 6 verified stays</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-semibold" onclick="resetFilters()" type="button">Reset Filters</button>
+</div>
+</div>
+<!-- Filter Controls -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md border border-outline-variant/30 mb-space-lg space-y-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<!-- Location Filter Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs" id="city-filter-buttons">
+<button class="city-btn px-space-md py-1.5 rounded-full font-label-md text-label-md bg-secondary text-on-secondary font-semibold transition-all" data-filter-city="all" type="button">All Locations</button>
+<button class="city-btn px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high font-semibold transition-all" data-filter-city="Mumbai" type="button">Mumbai</button>
+<button class="city-btn px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high font-semibold transition-all" data-filter-city="Navi Mumbai" type="button">Navi Mumbai</button>
+</div>
+<!-- Sort Dropdown -->
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Sort by:</span>
+<select class="px-space-md py-1.5 rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface outline-none cursor-pointer border border-outline-variant/30 focus:border-secondary" id="sort-select">
+<option value="recommended">Recommended</option>
+<option value="price-asc">Rent: Low to High</option>
+<option value="price-desc">Rent: High to Low</option>
+<option value="rating">Top Rated</option>
+</select>
+</div>
+</div>
+<!-- Amenities & Gender Sub-Filters -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-md border-t border-outline-variant/20">
+<div class="flex flex-wrap items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Must Haves:</span>
+<label class="inline-flex items-center gap-1.5 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input class="amenity-checkbox accent-secondary rounded" type="checkbox" value="wifi"/> High-Speed Wi-Fi
+                </label>
+<label class="inline-flex items-center gap-1.5 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input class="amenity-checkbox accent-secondary rounded" type="checkbox" value="ac"/> AC Room
+                </label>
+<label class="inline-flex items-center gap-1.5 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input class="amenity-checkbox accent-secondary rounded" type="checkbox" value="food"/> Mess / 3 Meals
+                </label>
+<label class="inline-flex items-center gap-1.5 text-on-surface font-body-sm text-body-sm cursor-pointer">
+<input class="amenity-checkbox accent-secondary rounded" type="checkbox" value="security"/> 24/7 Security
+                </label>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Occupancy:</span>
+<select class="px-space-sm py-1 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface outline-none cursor-pointer border border-outline-variant/30" id="gender-filter">
+<option value="all">Any Setup</option>
+<option value="co-living">Co-Living / Mixed</option>
+<option value="girls">Girls PG Only</option>
+<option value="boys">Boys PG Only</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Properties Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="properties-container">
+<!-- Card 1: Authentic Student Co-living (IMAGE_12) -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,ac,food,security" data-city="Mumbai" data-gender="co-living" data-id="prop-1" data-price="15000" data-rating="4.9" onclick="openPropertyModal('prop-1')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Heritage Student Suite Living Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtKU3BcpSyVmUSdo3aXWDSGdajX9ZDMxDwyDpi8gSk_m_fzvajdJcUw4L4XclfAbw8VICboE7rnngr7_Aa_PfmIQLuN9o3K_EERQtimWZxqB5cz1vJtcKqGf_Wbx9Ld1Ykndt57a8k4bhH9KMdVOI8lcPW64k5feHfb11DOMIrLCvV6imn8dzyr-s1tieoJVzfmWR7FLl5RSIr6dLY-3vBI49i0S6KmEIlPX6Ibjoo44pMb8K3MJr4"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-1', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Co-Living • 0.6 km to IIT Bombay &amp; Vikhroli Metro
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">Heritage Student Suite &amp; Co-Living</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant">(142)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Powai, Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">High-Speed Wi-Fi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Mess Food</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AC</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">24/7 Security</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹15,000<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Zero Brokerage</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-1')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Authentic Student Study Room (IMAGE_13) -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,food,security" data-city="Navi Mumbai" data-gender="boys" data-id="prop-2" data-price="9500" data-rating="4.8" onclick="openPropertyModal('prop-2')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Scholars Inn Student Hostel Kharghar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXemM2v3v48HbLWmOR3dzlaPgOALenKIsCeq3bVtXNunzw6JL0DPM-9osk8x2RnARE0i_YGecQnP6xh1sWu4-pe7XqbW3m4YxRLbV70_hutMMx4IULtSeW1KojyVvXMW3hTq06oSr0A7D57hS_uLXYKRtn30-CzSLv--weSHzJAvMycRNk8K4pRTiJbTcd_n-AAyz_WHxHl9OnVnRCUX11H_cx6e_kQKqPWVGIyPKPIit1oaD_NcGl"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-2', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Boys PG • 0.4 km to NIFT &amp; Bharati Vidyapeeth
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">Scholars Inn Boys PG</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-on-surface-variant">(118)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Sector 15, Kharghar, Navi Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Dedicated Study Desks</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">3 Meals Mess</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Fast Wi-Fi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Biometric Gate</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹9,500<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Twin Sharing • Meals Included</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-2')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Real Navi Mumbai Nerul Student Residency -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,ac,food,security" data-city="Navi Mumbai" data-gender="girls" data-id="prop-3" data-price="13500" data-rating="4.9" onclick="openPropertyModal('prop-3')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Palm Grove Girls Residency Nerul" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBTHzZsEmeezGUo1A9bPQ4DhRquTVqgO3t-FH2s140YUN8snKA8D0O-UQRKhgA-uwx-RS2F635X7HdPTHdUSAl2SJq1r7OyAf5vx_v31Ih7QHT4nvsF2JMqy_ctIvQSEk--wUP1GA-7cP9BFWssIDH__AJbxhl_Xd8acjohYtsS6zgrK6XLqhZWIfzCzClPlLvNWqiA_ZKXqC6BLs4sJYwi4oAOGmYBr-7hVB3SW2y0q6OM2kIh5nI"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-3', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Girls PG • 0.5 km to D.Y. Patil University &amp; Hospital
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">Palm Grove Girls Residency</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant">(97)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Sector 19A, Nerul, Navi Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">24/7 Female Warden</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AC Rooms</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Hygienic Mess</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Wi-Fi</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹13,500<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Zero Deposit Available</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-3')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Mumbai Bandra / Khar West Co-living -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,ac,security" data-city="Mumbai" data-gender="co-living" data-id="prop-4" data-price="21000" data-rating="4.8" onclick="openPropertyModal('prop-4')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Bandra Urban Scholar Flat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA59XAfyPnMsUxolaoZTl7bjQzSPVKjAig9EYGjCVX91_gbooH9tlG1zL7uy_dhLIW_gP6sSJvlGN5M9r4gZP3EDNYy1YpFY21g_in3F-L-r0PN_SYdgbD2mL4m3UoY_ifmPLdYysL5PUwTorbND9QLNUnPxGGKgZBGjR30u0m_mRPiuVCdBzM4d5QVhB4Wz6qyW9J8BLqRHdbxF7m5yT6LTo_QS5MRXKrZZMea2rgrLT9aTYTyWKh"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-4', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Co-Living • Near National College &amp; Thadomal
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">Urban Loft Scholar Flat</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-on-surface-variant">(86)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Bandra West, Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Modular Kitchen</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AC in all rooms</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">300 Mbps Wi-Fi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Washing Machine</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹21,000<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Co-living Suite</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-4')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Vile Parle Mumbai Girls House -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,ac,food,security" data-city="Mumbai" data-gender="girls" data-id="prop-5" data-price="14500" data-rating="4.8" onclick="openPropertyModal('prop-5')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="St. Teresa Student House Vile Parle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdkmIyPVZY5t8_steGzgtY9puQE_xh6xhmPqZxeJ3VH_ppfTFT9q5DlKBygxETkXB7tKdcpvvvWm3DacssZ2-K89YupxqL20mhpnMw7Haz64VBXRK_WUk493Viu5m2dhvuB_GYbcxWJsogS_tp3-FE3vihwVsKY1diWUTi_buKzRtsDbLB71tWyFRl-GPEZ524f4UATZLtU-u5WtWEpRfPO-mjMen9l_dW0fO8AFRWlLeDhDuMUxsK"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-5', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Girls Only • 0.3 km to NMIMS &amp; Mithibai College
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">St. Teresa Student Residence</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-on-surface-variant">(110)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Vile Parle West, Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Nutritious Mess</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">AC Bedrooms</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">CCTV &amp; Guard</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Reading Room</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹14,500<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Twin Occupancy</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-5')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6: Navi Mumbai Kharghar Valley View PG -->
+<article class="property-card bg-surface-container-lowest rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-outline-variant/30 cursor-pointer" data-amenities="wifi,ac,food,security" data-city="Navi Mumbai" data-gender="boys" data-id="prop-6" data-price="11000" data-rating="4.7" onclick="openPropertyModal('prop-6')">
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="Valley View Student Suites Kharghar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB71eSyhRpBuA4OjNGW-2n73Pdb3xZv-57M2pwnpMBaFTakPZahysko9OWSXmY0e7pN1uNPejcLzA-ksgRcyn5KHBcK9hVd5xutqmYi1s6UVvf9rSmrFSj2rjn6miQ0gN75TMOREm1kvhZqhCIVliE5rwHDnUFEogU-oovhfd5aLG8SP9aQd8AsshqbJ-d-PKHL1fwf4ifTauM_aoGKMJeCADaiaO6EXHpltOZWg-My989_jnBg4UeW"/>
+<div class="absolute top-3 left-3 px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Stay
+                </div>
+<button aria-label="Save to favorites" class="save-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/85 backdrop-blur-md hover:bg-surface-container-lowest text-on-surface flex items-center justify-center transition-all z-10" onclick="event.stopPropagation(); toggleSaveProperty('prop-6', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 px-space-sm py-0.5 rounded bg-primary/75 backdrop-blur-sm text-surface-container-lowest font-label-sm text-label-sm">
+                  Boys PG • 0.8 km to ITM Executive Campus Kharghar
+                </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold group-hover:text-secondary transition-colors">Valley View Student PG</h3>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.7</span>
+<span class="text-on-surface-variant">(64)</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[15px]">location_on</span>
+                    Sector 20, Kharghar, Navi Mumbai
+                  </p>
+<div class="flex flex-wrap gap-1.5 mb-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Daily Housekeeping</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Fast Fiber Wi-Fi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">24/7 Security</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Mess In-house</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">₹11,000<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">/mo</span></p>
+<p class="font-label-sm text-label-sm text-on-tertiary-container">Budget Friendly</p>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-all flex items-center gap-1 font-semibold" onclick="event.stopPropagation(); openPropertyModal('prop-6')" type="button">
+<span>View Stay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- 4. OWNER RECRUITMENT CALLOUT BANNER -->
+<section class="w-full py-space-lg bg-surface-container">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="bg-primary-container text-inverse-on-surface rounded-2xl p-space-lg lg:p-space-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-xl">
+<span class="px-space-sm py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">ATTENTION PROPERTY OWNERS</span>
+<h2 class="font-headline-lg text-2xl sm:text-3xl text-surface-container-lowest font-bold">Own a PG, Hostel, or Flat near campus?</h2>
+<p class="font-body-md text-body-md text-surface-variant">List your space with CampusNest in under 2 minutes. Gain verified university tenants, zero brokerage fees, and automated rent deposits.</p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full md:w-auto">
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md transition-all shadow-md flex items-center justify-center gap-space-xs font-bold" onclick="openOwnerModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">add_home_work</span>
+<span>+ List Your Property for Rent</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. HOW IT WORKS -->
+<section class="w-full py-space-xl bg-surface-container-low" id="how-it-works">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase font-bold">Simple Three-Phase Flow</span>
+<h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-bold mt-1">How CampusNest Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">From campus acceptance to walking into your new room — verified, seamless, and transparent.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-outline-variant/20 hover:-translate-y-1 transition-all">
+<div class="text-secondary font-headline-xl text-3xl font-bold opacity-30 mb-space-xs">01</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">SEARCH</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Select your university campus in Mumbai or Navi Mumbai. Filter by walking distance, dietary mess options, and student-friendly budgets.</p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span>Verified proximity metrics</span>
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-outline-variant/20 hover:-translate-y-1 transition-all">
+<div class="text-secondary font-headline-xl text-3xl font-bold opacity-30 mb-space-xs">02</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">EXPLORE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Inspect genuine interior photos, actual room bed counts, student desk setups, included food menus, and reviews from real peers.</p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span>Direct owner contact info</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md border border-outline-variant/20 hover:-translate-y-1 transition-all">
+<div class="text-secondary font-headline-xl text-3xl font-bold opacity-30 mb-space-xs">03</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mb-space-xs">BELONG</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Submit your digital rental request directly to the host. Get instant confirmation without brokerage, middle-men, or hidden fees.</p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span>Zero brokerage rental</span>
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SERVICES ROADMAP -->
+<section class="w-full py-space-xl bg-background" id="services-roadmap">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase font-bold">Beyond A Place To Sleep</span>
+<h2 class="font-headline-lg text-2xl sm:text-3xl text-primary font-bold mt-1">Campus Living Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every resource you need to thrive outside the classroom.</p>
+</div>
+<div class="px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold self-start md:self-auto">
+              CampusNest Ecosystem 2026
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Available</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1 font-bold">Mess &amp; Tiffin Subscriptions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily hygienic home-style meal tiffins delivered right to your PG lobby or study room.</p>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">directions_bus</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Transit Map</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1 font-bold">Campus Transit Routes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Local train, metro, shared auto, and NMMT bus routes between your PG and campus gates.</p>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Active</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1 font-bold">Roommate Matching</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Match with course-mates based on sleep routines, study habits, and dietary preferences.</p>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Free</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1 font-bold">Rent Splitter &amp; Bills</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Split electricity, Wi-Fi, and groceries transparently with flatmates each month.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- ================= INTERACTIVE MODALS ================= -->
+<!-- MODAL 1: OWNER PORTAL - LIST YOUR PROPERTY (With Drag & Drop Photo Upload) -->
+<div class="fixed inset-0 z-50 bg-primary-container/80 backdrop-blur-sm hidden items-center justify-center p-space-md overflow-y-auto" id="owner-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-2xl w-full p-space-lg lg:p-space-xl shadow-2xl my-auto animate-in fade-in zoom-in duration-200 border border-outline-variant/40">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30 mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">add_home_work</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Owner Portal</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">List Your Property for Rent</h3>
+</div>
+</div>
+<button aria-label="Close modal" class="w-9 h-9 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors" onclick="closeOwnerModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Listing Form -->
+<form class="space-y-space-md" id="owner-listing-form" onsubmit="handleOwnerFormSubmit(event)">
+<!-- Photo Upload Interactive Area -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-1.5">Property Photos</label>
+<div class="relative border-2 border-dashed border-outline-variant/70 hover:border-secondary rounded-xl p-4 sm:p-6 text-center cursor-pointer bg-surface-container-low transition-colors group" id="drop-zone" onclick="document.getElementById('file-upload').click()">
+<input accept="image/*" class="hidden" id="file-upload" multiple="" onchange="handleFileSelect(event)" type="file"/>
+<div class="flex flex-col items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[36px] text-secondary group-hover:scale-110 transition-transform">cloud_upload</span>
+<p class="font-label-md text-label-md text-primary font-medium">Click to upload or drag &amp; drop photos</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">JPEG, PNG or WEBP (Max 5MB per photo)</p>
+</div>
+<!-- Dynamic Photo Preview Container -->
+<div class="hidden flex-wrap gap-2 mt-3 pt-3 border-t border-outline-variant/30" id="photo-previews"></div>
+</div>
+</div>
+<!-- Property Name & Type -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Property Name / Title *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-name" placeholder="e.g. Green Valley Student Suites" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Property Type *</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all cursor-pointer" id="owner-prop-type" required="">
+<option value="PG (Paying Guest)">PG (Paying Guest)</option>
+<option value="Student Hostel">Student Hostel</option>
+<option value="Co-living Space">Co-living Space</option>
+<option value="Full Student Flat / Apartment">Full Student Flat / Apartment</option>
+</select>
+</div>
+</div>
+<!-- City & Locality -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">City / Region *</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all cursor-pointer" id="owner-prop-city" required="">
+<option value="Navi Mumbai">Navi Mumbai</option>
+<option value="Mumbai">Mumbai</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Locality / Area *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-locality" placeholder="e.g. Sector 15 Kharghar, Powai, Nerul..." required="" type="text"/>
+</div>
+</div>
+<!-- Rent, Deposit & Campus Proximity -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Monthly Rent (₹) *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-rent" placeholder="e.g. 12000" required="" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Security Deposit (₹)</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-deposit" placeholder="e.g. 10000" type="number"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Distance to Campus</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-distance" placeholder="e.g. 0.5 km to NIFT" type="text"/>
+</div>
+</div>
+<!-- Amenities Checkboxes -->
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Included Amenities</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs font-body-sm text-body-sm">
+<label class="inline-flex items-center gap-1.5 p-1.5 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="owner-amenity accent-secondary" type="checkbox" value="wifi"/> High-Speed Wi-Fi
+            </label>
+<label class="inline-flex items-center gap-1.5 p-1.5 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="owner-amenity accent-secondary" type="checkbox" value="ac"/> AC Rooms
+            </label>
+<label class="inline-flex items-center gap-1.5 p-1.5 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="owner-amenity accent-secondary" type="checkbox" value="food"/> Mess / 3 Meals
+            </label>
+<label class="inline-flex items-center gap-1.5 p-1.5 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="owner-amenity accent-secondary" type="checkbox" value="security"/> 24/7 Security
+            </label>
+</div>
+</div>
+<!-- Contact Phone -->
+<div>
+<label class="block font-label-sm text-label-sm text-primary font-semibold mb-1">Owner Contact Number (WhatsApp / Phone) *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface border border-outline-variant/40 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="owner-prop-phone" placeholder="+91 98201 XXXXX" required="" type="tel"/>
+</div>
+<!-- Footer Actions -->
+<div class="pt-space-sm flex items-center justify-between border-t border-outline-variant/20">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors font-medium" onclick="closeOwnerModal()" type="button">Cancel</button>
+<button class="px-space-xl py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-1.5 shadow-md hover:shadow-lg transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Submit Property for Verification</span>
+</button>
+</div>
+</form>
+<!-- Confirmation Screen -->
+<div class="hidden text-center py-space-xl space-y-space-md" id="owner-success-view">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px]">verified</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-primary font-bold">Property Submitted Successfully!</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+            Our CampusNest field team in Mumbai / Navi Mumbai will verify the property details and contact you within 24 hours to schedule physical verification.
+          </p>
+</div>
+<button class="px-space-xl py-2.5 rounded-lg bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors font-semibold" onclick="closeOwnerModal()" type="button">Done</button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: CENTERED PROPERTY DETAILS MODAL -->
+<div class="fixed inset-0 z-50 bg-primary-container/80 backdrop-blur-sm hidden items-center justify-center p-space-md overflow-y-auto" id="property-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl my-auto animate-in fade-in zoom-in duration-200 border border-outline-variant/40">
+<div class="relative aspect-[16/9] max-h-80 bg-surface-container overflow-hidden">
+<img alt="Property modal preview" class="w-full h-full object-cover" id="modal-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtKU3BcpSyVmUSdo3aXWDSGdajX9ZDMxDwyDpi8gSk_m_fzvajdJcUw4L4XclfAbw8VICboE7rnngr7_Aa_PfmIQLuN9o3K_EERQtimWZxqB5cz1vJtcKqGf_Wbx9Ld1Ykndt57a8k4bhH9KMdVOI8lcPW64k5feHfb11DOMIrLCvV6imn8dzyr-s1tieoJVzfmWR7FLl5RSIr6dLY-3vBI49i0S6KmEIlPX6Ibjoo44pMb8K3MJr4"/>
+<button aria-label="Close modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-primary/70 hover:bg-primary text-surface-container-lowest flex items-center justify-center transition-all shadow-md" onclick="closePropertyModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="absolute bottom-4 left-4 px-space-md py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Campus Living
+        </div>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="flex flex-wrap items-start justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-md text-xl sm:text-2xl text-primary font-bold" id="modal-title">Heritage Student Suite &amp; Co-Living</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5" id="modal-sub">
+<span class="material-symbols-outlined text-secondary text-[16px]">pin_drop</span>
+              Powai, Mumbai • 0.6 km to IIT Bombay &amp; Vikhroli Metro
+            </p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-2xl text-secondary font-bold" id="modal-price">₹15,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ month</span>
+<p class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Zero Brokerage</p>
+</div>
+</div>
+<div class="space-y-space-xs">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider font-bold">About This Student Stay</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="modal-desc">
+            Authentic, sunlit co-living suite situated right by university transit corridors. Features dedicated ergonomic study setups, high-speed 300 Mbps Wi-Fi, home-cooked daily meals (breakfast + dinner), 24/7 biometric gated security, and a lively living room community with fellow college students.
+          </p>
+</div>
+<!-- Proximity Highlights -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions_walk</span>
+</div>
+<div class="text-sm">
+<p class="font-bold text-primary">Walking Distance to Campus</p>
+<p class="text-on-surface-variant text-xs" id="modal-distance">7 mins walk to college gates • 5 mins walk to local metro &amp; transit</p>
+</div>
+</div>
+<!-- Amenities -->
+<div>
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider mb-space-xs font-bold">Included Amenities</h4>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">wifi</span> High-Speed Wi-Fi</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">ac_unit</span> Air Conditioner</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">restaurant</span> Mess Meals Included</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">local_laundry_service</span> Laundry Facilities</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">cleaning_services</span> Daily Housekeeping</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[18px]">security</span> Biometric CCTV Guard</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between border-t border-outline-variant/30">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors font-semibold" onclick="closePropertyModal()" type="button">
+            Back to Stays
+          </button>
+<div class="flex items-center gap-2">
+<a class="px-space-md py-2.5 rounded-lg border border-secondary text-secondary hover:bg-surface-container-low font-label-md text-label-md font-bold flex items-center gap-1" href="tel:+919820123456">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Call Host</span>
+</a>
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md flex items-center gap-space-xs shadow-md font-bold" onclick="showToast('Application link sent! Host will respond via WhatsApp.', 'mark_chat_read')" type="button">
+<span>Reserve Stay</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-xl translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-xs font-label-md text-label-md" id="toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-message">Property submitted for verification!</span>
+</div>
+<!-- ================= COMPREHENSIVE ULTRA-PROFESSIONAL FOOTER ================= -->
+<footer class="w-full bg-primary-container text-inverse-on-surface border-t border-outline-variant/20 pt-space-xl pb-space-lg" id="footer-contact">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Main Grid with Brand, Nav Columns & Contact Info Box -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl border-b border-outline-variant/20">
+<!-- Col 1: Official Logo, Tagline & Mission -->
+<div class="lg:col-span-4 flex flex-col items-start gap-space-md">
+<a class="flex items-center gap-space-sm" href="#">
+<img alt="CampusNest Logo" class="h-10 w-auto object-contain brightness-0 invert" src="Campus nest Logo.png"/>
+</a>
+<p class="font-label-md text-label-md tracking-widest text-secondary-fixed font-bold uppercase">
+            FIND. STAY. BELONG.
+          </p>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">
+            CampusNest isn't just helping students find a room. It's helping them find where their next university chapter begins — connecting scholars with verified homes across Mumbai and Navi Mumbai.
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest/20 text-xs font-semibold text-secondary-fixed border border-secondary-fixed/20">
+              Zero Brokerage Guarantee
+            </span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest/20 text-xs font-semibold text-surface-variant border border-outline-variant/20">
+              In-Person Verified
+            </span>
+</div>
+</div>
+<!-- Col 2: Discover Links -->
+<div class="lg:col-span-2 flex flex-col gap-space-sm">
+<h3 class="font-label-lg text-label-lg text-surface-container-lowest font-bold tracking-wider">Discover</h3>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant">
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Explore PGs</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Kharghar Hostels</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Powai Student Stays</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Nerul Accommodations</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Bandra Co-Living</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#discover-section">Vile Parle PG Rooms</a></li>
+</ul>
+</div>
+<!-- Col 3: For Owners & Services -->
+<div class="lg:col-span-2 flex flex-col gap-space-sm">
+<h3 class="font-label-lg text-label-lg text-surface-container-lowest font-bold tracking-wider">For Owners</h3>
+<ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-variant">
+<li><button class="text-left text-secondary-fixed hover:underline font-semibold" onclick="openOwnerModal()" type="button">+ List Your Property</button></li>
+<li><button class="text-left hover:text-surface-container-lowest transition-colors" onclick="openOwnerModal()" type="button">Owner Dashboard</button></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#how-it-works">Verification Standards</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#services-roadmap">Mess &amp; Food Services</a></li>
+<li><a class="hover:text-surface-container-lowest transition-colors" href="#services-roadmap">Roommate Matching</a></li>
+</ul>
+</div>
+<!-- Col 4: DEDICATED CONTACT INFO BOX -->
+<div class="lg:col-span-4 bg-surface-container-highest/10 border border-outline-variant/30 rounded-xl p-space-md space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">contact_support</span>
+<h3 class="font-label-lg text-label-lg text-surface-container-lowest font-bold tracking-wide">CampusNest Headquarters</h3>
+</div>
+<div class="space-y-2.5 text-body-sm text-surface-variant font-normal">
+<!-- Physical Address -->
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">location_city</span>
+<p class="text-xs leading-relaxed text-surface-variant">
+<strong class="text-surface-container-lowest block">CampusNest Hub:</strong>
+                Sector 15, Kharghar, Navi Mumbai &amp; Powai, Mumbai 400076, Maharashtra, India
+              </p>
+</div>
+<!-- Phone -->
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0">call</span>
+<div class="text-xs flex flex-wrap gap-x-2">
+<a class="hover:text-secondary-fixed transition-colors font-medium" href="tel:+919820123456">+91 98201 23456</a>
+<span>/</span>
+<a class="hover:text-secondary-fixed transition-colors font-medium" href="tel:+9102249823400">+91 (022) 4982-3400</a>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0">mail</span>
+<div class="text-xs flex flex-wrap gap-x-2">
+<a class="hover:text-secondary-fixed transition-colors font-medium" href="mailto:support@campusnest.in">support@campusnest.in</a>
+<span>/</span>
+<a class="hover:text-secondary-fixed transition-colors font-medium" href="mailto:partners@campusnest.in">partners@campusnest.in</a>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex items-center gap-2.5 pt-1 border-t border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0">schedule</span>
+<p class="text-xs text-secondary-fixed font-medium">
+                Hours: Mon–Sat: 9:00 AM – 8:00 PM IST
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Bottom Strip -->
+<div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-surface-variant">
+<p>© 2026 CampusNest Inc. All rights reserved. Built for students, by students.</p>
+<div class="flex items-center gap-space-md text-xs">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+<a class="hover:underline" href="#">Student Safety Shield</a>
+<div class="flex items-center gap-1 text-secondary-fixed">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span>All systems operational | Mumbai &amp; Navi Mumbai Network</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- ================= LOGIC & JAVASCRIPT ================= -->
+<script src="script.js"></script>
+</body></html>
